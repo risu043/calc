@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Train+One&display=swap');
+
+/*
+COLORS
+================================================ */
+:root {
+  --main-color: #ffff00;
+  --base-color: #000000;
+  --sub-color: #ffffff;
+  --font-title: 'Train One', serif; /* regular400 */
+  --font-number: 'Noto Sans JP', serif; /* medium500 */
+}
+
+/*
+    GENERAL STYLING
+================================================ */
+html {
+  font-size: 100%;
+}
+body {
+  background-color: var(--base-color);
+  color: var(--sub-color);
+  font-family: var(--font-number);
+  background-image: url(bg-star.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+    COMMON
+================================================ */
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+
+/* layout */
+main {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+  text-align: center;
+}
+.content {
+  padding: 0 1rem;
+  @media (width > 600px) {
+    padding: 0;
+  }
+}
+
+/*
+    MAIN
+================================================ */
+
+.title {
+  color: var(--main-color);
+  font-family: var(--font-title);
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  @media (600px < width) {
+    font-size: 3rem;
+  }
+}
+
+.display {
+  color: var(--sub-color);
+  font-family: var(--font-number);
+  font-size: 2rem;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  width: 100%;
+  height: 4rem;
+  text-align: right;
+  padding: 0 1.5rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+button {
+  color: var(--sub-color);
+  font-family: var(--font-number);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  border: 1px solid var(--sub-color);
+  border-right: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(2px);
+}
+
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16),
+button:nth-child(19) {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+}
+
+button:nth-child(17) {
+  aspect-ratio: auto;
+  border-radius: 50px;
+  grid-column: 1 / 3;
+}
